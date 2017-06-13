@@ -46,16 +46,16 @@ if ( ! function_exists( 'ot_register_theme_options_page' ) ) {
             'pages'               => array( 
               array(
                 'id'              => 'ot_theme_options',
-                'parent_slug'     => apply_filters( 'ot_theme_options_parent_slug', 'themes.php' ),
-                'page_title'      => apply_filters( 'ot_theme_options_page_title', __( 'Theme Options', 'option-tree' ) ),
-                'menu_title'      => apply_filters( 'ot_theme_options_menu_title', __( 'Theme Options', 'option-tree' ) ),
+                'parent_slug'     => apply_filters( 'ot_theme_options_parent_slug', '' ),
+                'page_title'      => apply_filters( 'ot_theme_options_page_title', __( 'Tùy chỉnh của bạn', 'option-tree' ) ),
+                'menu_title'      => apply_filters( 'ot_theme_options_menu_title', __( 'Tùy chỉnh của bạn', 'option-tree' ) ),
                 'capability'      => $caps = apply_filters( 'ot_theme_options_capability', 'edit_theme_options' ),
                 'menu_slug'       => apply_filters( 'ot_theme_options_menu_slug', 'ot-theme-options' ),
                 'icon_url'        => apply_filters( 'ot_theme_options_icon_url', null ),
-                'position'        => apply_filters( 'ot_theme_options_position', null ),
-                'updated_message' => apply_filters( 'ot_theme_options_updated_message', __( 'Theme Options updated.', 'option-tree' ) ),
+                'position'        => apply_filters( 'ot_theme_options_position', 30 ),
+                'updated_message' => apply_filters( 'ot_theme_options_updated_message', __( 'Lưu thay đổi thành công.', 'option-tree' ) ),
                 'reset_message'   => apply_filters( 'ot_theme_options_reset_message', __( 'Theme Options reset.', 'option-tree' ) ),
-                'button_text'     => apply_filters( 'ot_theme_options_button_text', __( 'Save Changes', 'option-tree' ) ),
+                'button_text'     => apply_filters( 'ot_theme_options_button_text', __( 'Lưu thay đổi', 'option-tree' ) ),
                 'contextual_help' => apply_filters( 'ot_theme_options_contextual_help', $contextual_help ),
                 'sections'        => apply_filters( 'ot_theme_options_sections', $sections ),
                 'settings'        => apply_filters( 'ot_theme_options_settings', $settings )

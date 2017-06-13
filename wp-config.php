@@ -1,4 +1,10 @@
 <?php
+
+// BEGIN iThemes Security - Do not modify or remove this line
+// iThemes Security Config Details: 2
+define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
+// END iThemes Security - Do not modify or remove this line
+
 /**
  * The base configuration for WordPress
  *
@@ -56,6 +62,11 @@ define('LOGGED_IN_SALT',   'P+I>O]9rR#x aP):]_&7TV+JWLy@qgnNlvB`=0_*1:WZ##I0XWy,
 define('NONCE_SALT',       '}Qx*-1xE%$Z$<9N=d}~ut5%$;6?KXnOqfB@+V2v^Z}yw>TO>:4u~OGJCG8/2(!]8');
 
 /**#@-*/
+
+/** custom define **/
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+define( 'WP_AUTO_UPDATE_CORE', false );
+define('WP_POST_REVISIONS', false );
 
 /**
  * WordPress Database Table prefix.

@@ -1,3 +1,19 @@
+# BEGIN iThemes Security - Do not modify or remove this line
+# iThemes Security Config Details: 2
+	# Disable Directory Browsing - Security > Settings > System Tweaks > Directory Browsing
+	Options -Indexes
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+		# Disable PHP in Uploads - Security > Settings > System Tweaks > PHP in Uploads
+		RewriteRule ^wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)$ - [NC,F]
+	</IfModule>
+
+	# Enable the hide backend feature - Security > Settings > Hide Login Area > Hide Backend
+	RewriteRule ^(/wp/)?manage/?$ /wp/wp-login.php [QSA,L]
+	RewriteRule ^(/wp/)?wp-register-php/?$ /wplogin?action=register [QSA,L]
+# END iThemes Security - Do not modify or remove this line
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
