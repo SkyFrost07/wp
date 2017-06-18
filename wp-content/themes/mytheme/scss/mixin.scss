@@ -1,0 +1,101 @@
+$fsize: 12;
+$menuh: 55px;
+
+$dfcl: #ddd;
+/*$maincl: #7B0810;*/
+$maincl: #189eff;
+/*$hmaincl: #ae0c18;*/
+$hmaincl: #189eff;
+$graycl: #888;
+$bodycl: #333;
+$bodybg: #f5f5f5;
+$micl: #6b6b6b;
+/*$focuscl: #E1635C;*/
+$focuscl: #fff;
+$linkcl: #23527c;
+$titlecl: #333;
+$prodcl: #d72209;
+$hvcl: #337ab7;
+$graycl: #6b6b6b;
+$endcl: #efefef;
+$ftmenucl: #efefef;
+/*$ftmenucl: #189eff;*/
+
+$bannerbg: #5F5F5F;
+
+@mixin transform ($trans) {
+    transform: $trans;
+    -moz-transform: $trans;
+    -webkit-transform: $trans;
+    -o-transform: $trans;
+    -ms-transform: $trans;
+}
+
+@mixin transi ($transi) {
+    transition: $transi;
+    -moz-transition: $transi;
+    -webkit-transition: $transi;
+    -o-transition: $transi;
+    -ms-transition: $transi;
+}
+
+@mixin shadow ($shadow) {
+    box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+}
+
+@mixin text-shadow ($shadow) {
+    text-shadow: $shadow;
+    -moz-text-shadow: $shadow;
+    -webkit-text-shadow: $shadow;
+    -o-text-shadow: $shadow;
+    -ms-text-shadow: $shadow;
+}
+
+.clearboth {
+    clear: both;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+.nowrap {
+    white-space: nowrap;
+}
+
+.mgb-25 {
+    margin-bottom: 25px;
+}
+.mgb-20 {
+    margin-bottom: 20px;
+}
+.mgb-15 {
+    margin-bottom: 15px;
+}
+.mgb-10 {
+    margin-bottom: 10px;
+}
+.mgb-5 {
+    margin-bottom: 5px;
+}
+.mgb-0 {
+    margin-bottom: 0px!important;
+}
+
+.pdt-30 {
+    padding-top: 30px;
+}
+.pdt-25 {
+    padding-top: 25px;
+}
+
+.bg-gray {
+    background: #f5f5f5;
+}
+.bg-default {
+    background: #eeeeee;
+}

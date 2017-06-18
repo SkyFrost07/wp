@@ -19,11 +19,12 @@ register_nav_menus(
 function pl_add_support_theme() {
     add_theme_support('post-thumbnails');
     add_image_size('medium', 300, 240, true);
-    add_image_size('large', 1600, 900);
+    add_image_size('slide', 1170, 450, true);
     // hide admin bar
     if(!is_admin()){
         show_admin_bar(false);
     }
+    add_theme_support('woocommerce');
 }
 
 add_action('after_setup_theme', 'pl_add_support_theme');
