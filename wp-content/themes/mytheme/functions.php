@@ -86,5 +86,6 @@ add_action( 'wp_enqueue_scripts', 'pl_theme_scripts' );
 
 //more theme function
 include_once 'include/pl_functions.php';
+include_once 'include/custom-wp-admin.php';
 
 ?>

@@ -1,10 +1,10 @@
 === Redux Framework ===
 Contributors: dovyp, kprovance
-Donate link: http://ideas.reduxframework.com
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMFMHWUPKHKPW
 Tags: admin, admin interface, options, theme options, plugin options, options framework, settings, web fonts, google fonts
 Requires at least: 3.5.1
-Tested up to: 4.8
-Stable tag: 3.6.5
+Tested up to: 4.9.9
+Stable tag: 3.6.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,23 +14,16 @@ Redux is a simple, truly extensible and fully responsive options framework for W
 
 Redux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins. Built on the WordPress Settings API, Redux supports a multitude of field types as well as: custom error handling, custom fields & validation types, and import/export functionality.
 
-But what does Redux actually DO? We don't believe that theme and plugin
-developers should have to reinvent the wheel every time they start work on a
-project. Redux is designed to simplify the development cycle by providing a
-streamlined, extensible framework for developers to build on. Through a
-simple, well-documented config file, third-party developers can build out an
-options panel limited only by their own imagination in a fraction of the time
-it would take to build from the ground up!
+But what does Redux actually DO?  We don't believe that theme and plugin developers should have to reinvent the wheel every time they start work on a project. Redux is designed to simplify the development cycle by providing a streamlined, extensible framework for developers to build on. Through a simple, well-documented config file, third-party developers can build out an options panel limited only by their own imagination in a fraction of the time it would take to build from the ground up!
 
 = Online Demo =
 Don't take our word for it, check out our online demo and try Redux without installing a thing!
 [**http://demo.redux.io/**](http://demo.redux.io/)
 
 = Use the Redux Builder to Get Started =
-Want to use Redux, but not sure what to do? Use our [builder](http://build.reduxframework.com/)! It will allow you to make
-a custom theme based on [_s](http://underscores.me), [TGM](http://tgmpluginactivation.com), and [Redux](http://reduxframework.com), and any Redux arguments you want to set.
-Don't want to make your own theme? Then output a custom admin folder that you can place
-in a theme or plugin. Oh and did we mention it's free? Try it today at:
+Want to use Redux, but not sure what to do? Use our [builder](http://build.reduxframework.com/)! It will allow you to make a custom theme based on [_s](http://underscores.me), [TGM](http://tgmpluginactivation.com), and [Redux](http://reduxframework.com), and any Redux arguments you want to set.
+
+Don't want to make your own theme? Then output a custom admin folder that you can place in a theme or plugin. Oh and did we mention it's free? Try it today at:
 [**http://build.reduxframework.com/**](http://build.reduxframework.com/)
 
 
@@ -94,12 +87,9 @@ It is hard to continue development and support for this free plugin without cont
 We need your help to translate Redux into your language! Redux is part of the WP-Translations.org team. To help us translate Redux create a few account here: <a href="https://www.transifex.com/organization/wp-translations">https://www.transifex.com/organization/wp-translations</a>. Once you're in, you can head over to the <a href="https://www.transifex.com/projects/p/redux-framework/">Redux sub-project</a> and translate away. Thank you for your assistance.
 
 = Get Involved =
-Redux is an ever-changing, living system. Want to stay up to date or
-contribute? Subscribe to one of our mailing lists or join us on [Facebook](https://facebook.com/reduxframework) or [Twitter](https://twitter.com/reduxframework) or [Github](https://github.com/ReduxFramework/ReduxFramework)!
+Redux is an ever-changing, living system. Want to stay up to date or contribute? Subscribe to one of our mailing lists or join us on [Facebook](https://facebook.com/reduxframework) or [Twitter](https://twitter.com/reduxframework) or [Github](https://github.com/ReduxFramework/ReduxFramework)!
 
-NOTE: Redux is not intended to be used on its own. It requires a config file
-provided by a third-party theme or plugin developer to actual do anything
-cool!
+NOTE: Redux is not intended to be used on its own. It requires a config file provided by a third-party theme or plugin developer to actual do anything cool!
 
 == Installation ==
 
@@ -124,6 +114,74 @@ That's because the real FAQ section is on our site! Please visit [http://docs.re
 1. This is the demo mode of Redux Framework. Activate it and you will find a fully-functional admin panel that you can play with. On the Plugins page, beneath the description and an activated Redux Framework, you will find a Demo Mode link. Click that link to activate or deactivate the sample-config file Redux ships with.  Don't take our word for it, check out our online demo and try Redux without installing a thing! [**http://demo.reduxframework.com/wp-admin/**](http://demo.reduxframework.com/wp-admin/)
 
 == Changelog ==
+## 3.6.14
+* Fixed:    #3583:  Import failing when max_input_vars exceeded.  Function moved to ajax_save to avoid this issue.
+
+## 3.6.13
+* Skipping.  I'm superstitious! - kp
+
+## 3.6.12.2
+* Fixed:    #3586:  Database not saving properly in 'network' mode.  Thanks @Tofandel.
+* Fixed:    #3584:  Improved fox for #3580.  Thanks @Enchiridion.
+
+## 3.6.12.1
+* Fixed:    #3580 - 'tax_query' array in args for WordPress data arg throwing a string conversation error.
+
+## 3.6.12
+* Fixed:    #3577 - Added isset to REMOTE_ADDR check to prevent error.
+
+## 3.6.11
+* Fixed:    #3561, #3562 - Not all selectors in async typography were properly formed, causing them not to render properly on screen.
+
+## 3.6.10
+* Updated   Google font update.
+* Updated:  #3447 - Updated RTL CSS.  Thanks @Abolfazlrt.
+* Fixed:    Duplicate ID warnings.
+* Fixed:    http warnings in https environments.
+* Fixed:    #3539 - Checkbox label not appearing unless 'desc' was set. Thanks @Enchiridion.
+* Fixed:    #3547 - ace_editor not rendering properly within a subsection. Thanks @Tofandel.
+* Fixed:    #3534 - Fix invalid CSS in asycn_typography (trailing commas).  Thanks @ksere
+* Fixed:    Spacing between Save and Reset buttons.
+* Added:    #3285 - dir and url filters for customizer extension.  Thanks @aaronhuisinga.
+            add_filter ("redux/extension/customizer/dir", $dir)
+            add_filter ("redux/extension/customizer/url", $url)
+
+## 3.6.9
+* Fixed:    Bypassing a WP bug where the gallery field would show a spinner on first open with no selected images.
+* Fixed:    #3512 - Image select in tile mode not highlighting default.
+
+## 3.6.8
+* Fixed:    Error in AJAX save due to incorrect object reference in redux.js.
+* Fixed:    Removed unused set_transient in welcome routine.  It was causing slow queries.
+* Updated:  Google Font update.
+* Fixed:    #3440: Parent object not being properly set in the Redux filesystem.
+* Fixed:    Color picker CSS issues as a result of WP 4.9.
+* Fixed:    #3429 - Select2 Sortable needed jQuery Sortable dependency.
+* Fixed:    Admin noticies when multiple instances of Redux running not displaying per panel.
+
+## 3.6.7.7
+* Fixed:    Filesystem path correction.
+* Fixed:    #3414: Incorrect classname causing an error on load, via the filesystem API.
+* Fixed:    #3413 - Restored old code allowing non array value for mode. This is for backward compatibility 
+            only and is unsupported.
+* Fixed:    #3410, #3409 - Dimensions field output causing index errors when mode not set in option array.
+* Fixed:    #3406 - javascript hasClass improperly used, affected customizer.
+* Fixed:    Array declarations PHP 7.1 now requires.
+* Updated:  Updated newsletter subscribe submit to support our newer newsletter server.
+* Fixed:    #3379 - select_image field not properly displaying default.  'default' arg must now be the 
+            full path to default image.
+* Updated:  Google Fonts.
+
+## 3.6.6
+* Misspelled class name is system info compiler causing System Status to fail.
+* #3359 - Responsive issue on option panel.  Too much blank space on panel in smartphone mode.
+* #2914, #3356 - Default image_select preset image not selected.  This was originally by design.  Now it's a thing.
+* Update:   Parsedown.php for PHP 7.x
+* Fixed:    System status improperly reporting writable status on upload folder.
+* Fixed:    #3124 - User submitted 'current_user_can' failing on PHP version <= 3.5.13.  Thanks for the assist, @sourabgupta88
+* Modified: #3321 - Font subset in typography not rendering on IE and Edge (Seriously?  People still use those?)
+* Modified: PHP7 compatibility.
+
 ## 3.6.5
 * Modified: #3321 - Font subset in typography not rendering on IE and Edge (Seriously?  People still use those?)
 * Fixed:    #3293 - Required not liking/hiding fields with switch default of 'false'.
@@ -1261,13 +1319,3 @@ Feature: Code at bottom of sample-config.php to hide plugin activation text abou
 
 = 3.0 =
 Redux is now hosted on WordPress.org! Update in order to get proper, stable updates.
-
-
-== Attribution ==
-
-Redux is was originally based off the following frameworks:
-
-* [NHP](https://github.com/leemason/NHP-Theme-Options-Framework)
-* [SMOF](https://github.com/syamilmj/Options-Framework "Slightly Modified Options Framework")
-
-It has now a completely different code base. If you like what you see, realize this is a labor of love. Please [donate to the Redux Framework](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N5AD7TSH8YA5U) if you are able.
